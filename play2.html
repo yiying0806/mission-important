@@ -1,0 +1,117 @@
+</!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MISSION IMPORTANT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+  <link rel=stylesheet href=jquery.mobile-1.4.5.min.css>
+  <script src=jquery-2.2.4.min.js></script>
+  <script src=jquery.mobile-1.4.5.min.js></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
+
+</head>
+
+
+<body>
+  
+   <div data-role="page">
+  
+   <div data-role="header" data-position="fixed">
+        <h1>MISSION IMPORTANT</h1>
+   </div>
+  
+
+  <div style="text-align:center;" style='visibility:hidden' >
+  <img id="indeximg" src="img/play2/play2-1.png" width="60%"><br>
+  <button id="backBtn" onclick="back()" style='visibility:hidden' data-inline="true" >Back</button>
+  <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
+  </div>
+  
+    <div  data-role="content" id="answerdiv" style='visibility:hidden'>
+  	<div style="text-align:center;" >
+  		
+    <input type="text"  style="text-align:center;" id="answer1"  placeholder="請輸入願意或不願意" data-inline="true" >  
+       <button id="tipBtn"  onclick="sendTip()" data-inline="true" >提示?</button>
+    <button id="sendBtn"  onclick="sendAns()" data-inline="true" >送出答案</button>
+    </div> 
+    </div>
+  
+ 
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <h4>&copy;YIYING</h4>
+    </div>
+     
+    </div>
+    <script>
+
+    var i=1;
+      
+      function sendTip(){
+     
+       alert("若想執行任務就回答願意"); 
+   }
+
+   function sendAns(){
+      if(document.getElementById("answer1").value=="願意"){
+     alert("任務確認，若失敗我們一概不承認這次行動!!!");
+      
+           
+        location.href='play3.html'
+     }else if(document.getElementById("answer1").value=="提示"){
+        
+     alert("請回答願意或不願意"); 
+     
+     }else{ 
+       
+           alert("好的，你可以先收書包在外面等")  
+     };
+    };
+      
+    function next(){
+      i=i+1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/play2/play2-2.png";
+       
+       document.getElementById("backBtn").style.visibility='visible';
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/play2/play2-3.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/play2/play2-4.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/play2/play2-5.png";
+     }else if(i==6){
+       document.getElementById("indeximg").src="img/play2/play2-6.png";
+       document.getElementById("nextBtn").style.visibility='hidden';
+       document.getElementById("answerdiv").style.visibility='visible';
+       
+     }
+    };
+      
+        function back(){
+      i=i-1;
+     if(i==2){
+       document.getElementById("indeximg").src="img/play2/play2-2.png";
+     }else if(i==3){
+       document.getElementById("indeximg").src="img/play2/play2-3.png";
+     }else if(i==4){
+       document.getElementById("indeximg").src="img/play2/play2-4.png";
+     }else if(i==5){
+       document.getElementById("indeximg").src="img/play2/play2-5.png";
+       
+       document.getElementById("nextBtn").style.visibility='visible';
+     }else if(i==1){
+       document.getElementById("indeximg").src="img/play2/play2-1.png";
+       
+       document.getElementById("backBtn").style.visibility='hidden';
+     }
+    };
+
+     
+   </script>
+
+
+</body>
+
+
+</html>
