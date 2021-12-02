@@ -23,7 +23,7 @@
   
 
   <div style="text-align:center;" style='visibility:hidden' >
-  <img id="indeximg" src="img/index/index-01.png" width="60%"><br>
+  <img id="indeximg" src="img/index/index-1.png" width="60%"><br>
   <button id="backBtn" onclick="back()" style='visibility:hidden' data-inline="true" >Back</button>
   <button id="nextBtn" onclick="next()" data-inline="true" >Next</button>
   </div>
@@ -53,11 +53,11 @@
    }
 
    function sendAns(){
-      if(document.getElementById("answer1").value=="030405"){
+      if(document.getElementById("answer1").value=="13"){
      alert("目的確認，導航啟動");
       
            
-        location.href='play02.html'
+        location.href='play2.html'
      }else if(document.getElementById("answer1").value=="提示"){
         
      alert("仔細觀察伊森所在照片中的地形"); 
@@ -71,17 +71,17 @@
     function next(){
       i=i+1;
      if(i==2){
-       document.getElementById("indeximg").src="img/index/index-02.png";
+       document.getElementById("indeximg").src="img/index/index-2.png";
        
        document.getElementById("backBtn").style.visibility='visible';
      }else if(i==3){
-       document.getElementById("indeximg").src="img/index/index-03.png";
+       document.getElementById("indeximg").src="img/index/index-3.png";
      }else if(i==4){
-       document.getElementById("indeximg").src="img/index/index-04.png";
+       document.getElementById("indeximg").src="img/index/index-4.png";
      }else if(i==5){
-       document.getElementById("indeximg").src="img/index/index-05.png";
+       document.getElementById("indeximg").src="img/index/index-5.png";
      }else if(i==6){
-       document.getElementById("indeximg").src="img/index/index-06.png";
+       document.getElementById("indeximg").src="img/index/index-6.png";
        document.getElementById("nextBtn").style.visibility='hidden';
        document.getElementById("answerdiv").style.visibility='visible';
        
@@ -91,17 +91,17 @@
         function back(){
       i=i-1;
      if(i==2){
-       document.getElementById("indeximg").src="img/index/index-02.png";
+       document.getElementById("indeximg").src="img/index/index-2.png";
      }else if(i==3){
-       document.getElementById("indeximg").src="img/index/index-03.png";
+       document.getElementById("indeximg").src="img/index/index-3.png";
      }else if(i==4){
-       document.getElementById("indeximg").src="img/index/index-04.png";
+       document.getElementById("indeximg").src="img/index/index-4.png";
      }else if(i==5){
-       document.getElementById("indeximg").src="img/index/index-05.png";
+       document.getElementById("indeximg").src="img/index/index-5.png";
        
        document.getElementById("nextBtn").style.visibility='visible';
      }else if(i==1){
-       document.getElementById("indeximg").src="img/index/index-01.png";
+       document.getElementById("indeximg").src="img/index/index-1.png";
        
        document.getElementById("backBtn").style.visibility='hidden';
      }
